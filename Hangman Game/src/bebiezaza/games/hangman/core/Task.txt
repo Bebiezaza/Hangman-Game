@@ -1,0 +1,4 @@
+//TODO Hangman Figure
+	//TODO Win/Lose
+	//TODO wording system
+	//TODO Continue?
