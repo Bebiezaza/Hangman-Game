@@ -14,7 +14,7 @@ public class Warning
 		
 		System.out.println("\nMore will come if bug is found");
 
-		System.out.println("\nPress any key then enter to continue");
+		System.out.println("\nPress any key then enter to continue"); //TODO Enter Only
 		
 		String f_00001_a_ = input.next();
 
