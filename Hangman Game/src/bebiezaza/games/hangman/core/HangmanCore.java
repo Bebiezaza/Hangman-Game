@@ -8,11 +8,10 @@ public class HangmanCore
 {
 	public static void main(String[] args)
 	{
+		System.out.println("Welcome to Hangman (Version " + Reference.VERSION + ")");
+		
+		System.out.println("Select difficulty(1 - 3) or see warning press (0): ");
 		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("Welcome to Hangman (Version " + Reference.Version + ")");
-		
-		System.out.println("Select difficulty(1 - 3) / see warning press (0): ");
 		int diff = scan.nextInt();
 		
 		if(diff==0)
