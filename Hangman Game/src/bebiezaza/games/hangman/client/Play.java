@@ -18,52 +18,40 @@ public class Play
 	
 	public void Start(int diff)
 	{
-		String words[] = new String [4];
-		String hints[] = new String [4];
+		String words[] = new String [2];
+		String hints[] = new String [2];
 		
 			switch(diff)
 			{
 				case 1:
 					words[0] = "cat";
 					hints[0] = "Animal.";
-					words[1] = "dog";
-					hints[1] = "Animal.";
-					words[2] = "book";
-					hints[2] = "Reading.";
-					words[3] = "breakfast";
-					hints[3] = "Meals.";
+					words[1] = "breakfast";
+					hints[1] = "Meals.";
 					break;
 				case 2:
 					words[0] = "president";
 					hints[0] = "Leader.";
 					words[1] = "exclamation";
 					hints[1] = "Shoutout.";
-					words[2] = "statement";
-					hints[2] = "To say.";
-					words[3] = "television";
-					hints[3] = "You watch it.";
 					break;
 				case 3:
-					words[0] = "amalgamation";
-					hints[0] = "Mixture.";
-					words[1] = "proclomation";
-					hints[1] = "Proclaim.";
-					words[2] = "establishment";
-					hints[2] = "Institution.";
-					words[3] = "rehabilitation";
-					hints[3] = "Reform.";
+					words[0] = "rehabilitation";
+					hints[0] = "Reform.";
+					words[1] = "establishment";
+					hints[1] = "Founding.";
 			}
 			
 		String word;
 		Random rand = new Random();
-		int w1 = rand.nextInt(4);
+		int w1 = rand.nextInt(2);
 		word = words[w1];
 		String hint = hints[w1];
 		String guess = "";
 		int wl = word.length() +1;
 			for(int i=1; i<wl; i++)
 			{
-				guess += "-";
+				guess += "_";
 			}
 		
 			String lu = "";
@@ -81,26 +69,25 @@ public class Play
 		}
 		else
 		{
-		String man[] = new String[7];
-		man[0] = " --\n   |\n   |\n   |\n_____\n";
-		man[1] = " --\n o |\n   |\n   |\n_____\n";
-		man[2] = " --\n o |\n/  |\n   |\n_____\n";
-		man[3] = " --\n o |\n/| |\n   |\n_____\n";
-		man[4] = " --\n o |\n/|\\|\n   |\n_____\n";
-		man[5] = " --\n o |\n/|\\|\n/  |\n_____\n";
-		man[6] = " --\n o |\n/|\\|\n/ \\|\n_____\n";
-		char g1[] = guess.toCharArray();
-		char w2[] = word.toCharArray();
-		System.out.println(man[0]);
+			String man[] = new String[7];
+			man[0] = " --\n   |\n   |\n   |\n_____\n";
+			man[1] = " --\n o |\n   |\n   |\n_____\n";
+			man[2] = " --\n o |\n/  |\n   |\n_____\n";
+			man[3] = " --\n o |\n/| |\n   |\n_____\n";
+			man[4] = " --\n o |\n/|\\|\n   |\n_____\n";
+			man[5] = " --\n o |\n/|\\|\n/  |\n_____\n";
+			man[6] = " --\n o |\n/|\\|\n/ \\|\n_____\n";
+			char g1[] = guess.toCharArray();
+			char w2[] = word.toCharArray();
+			System.out.println(man[0]);
 		
-		for(int x=0; x<g1.length; x++)
-		{
-			System.out.print(g1[x]);
-		}
-		
-		System.out.println();
-		Guess(guess, tt, canPlay, lu, word, g1, w2, man, hint);
-		
+			for(int x=0; x<g1.length; x++)
+			{
+				System.out.print(g1[x]);
+			}
+			
+			System.out.println();
+			Guess(guess, tt, canPlay, lu, word, g1, w2, man, hint);
 		}
 	}
 
